@@ -1,8 +1,7 @@
 sudo: required
-language: generic
 services:
   - docker
-
+language: generic
 before_install:
   - docker build -t mdshoaibalam/react-test -f ./client/Dockerfile.dev ./client
 
@@ -20,4 +19,3 @@ after_success:
   - docker push mdshoaibalam/multi-nginx
   - docker push mdshoaibalam/multi-server
   - docker push mdshoaibalam/multi-worker
-  
